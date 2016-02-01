@@ -15,7 +15,7 @@ import java.util.Random;
 
 /**
  *
- * @author Chris
+ * @author Chris & Yooju
  */
 public class Frame extends JFrame {
     Frame(){
@@ -30,6 +30,21 @@ public class Frame extends JFrame {
         int random4=rand.nextInt(d.height);
         setSize(random1,random2);
         setLocation(random3,random4);
+        
+        JLabel label = new JLabel(" Soft Engineering");
+        if(random1/8 <= (2*random2)/3){
+            label.setFont(new Font("Serif", Font.BOLD|Font.ITALIC, random1/8));
+            label.setForeground(Color.red);
+        }else{
+            label.setFont(new Font("Serif", Font.BOLD|Font.ITALIC, (2*random2)/3));
+            label.setForeground(Color.red);
+        }
+        getContentPane().add(label);
+    }
+    
+     public static void main(String[] args){
+        JFrame f = new Frame();
+        f.setVisible(true);
     }
     
 }
