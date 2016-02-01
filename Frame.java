@@ -31,14 +31,13 @@ public class Frame extends JFrame {
         setSize(random1,random2);
         setLocation(random3,random4);
         
-        JLabel label = new JLabel(" Soft Engineering");
-        if(random1/8 <= (2*random2)/3){
-            label.setFont(new Font("Serif", Font.BOLD|Font.ITALIC, random1/8));
-            label.setForeground(Color.red);
+        JLabel label = new JLabel(" Software Engineering");
+        if(random1/10 <= (2*random2)/3){
+            label.setFont(new Font("Serif", Font.BOLD|Font.ITALIC, random1/10));
         }else{
             label.setFont(new Font("Serif", Font.BOLD|Font.ITALIC, (2*random2)/3));
-            label.setForeground(Color.red);
         }
+        label.setForeground(Color.red);
         getContentPane().add(label);
     }
     
